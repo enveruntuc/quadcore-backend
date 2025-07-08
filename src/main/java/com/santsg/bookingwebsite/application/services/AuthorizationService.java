@@ -31,7 +31,6 @@ public class AuthorizationService {
                     .uri(apiUrl)
                     .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                     .body(loginRequest)
-                
                     .retrieve()
                     .body(String.class);
 
