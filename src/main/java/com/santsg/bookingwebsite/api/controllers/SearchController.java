@@ -19,7 +19,7 @@ public class SearchController {
         this.searchService = searchService;
     }
 
-    @PostMapping("/arrival-autocomplete")
+    @PostMapping("/autocomplete")
     public ResponseEntity<ApiResponse<ArrivalAutocompleteResponseBody>> getArrivalAutocomplete(
             @RequestHeader(HttpHeaders.AUTHORIZATION) String authorization,
             @RequestBody Map<String, Object> body) {
