@@ -8,9 +8,11 @@ import com.santsg.bookingwebsite.entities.shared.Globals;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestClientException;
 
+@Service
 public class SearchService {
     private final RestClient restClient;
 
