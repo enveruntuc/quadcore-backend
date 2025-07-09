@@ -1,7 +1,8 @@
 package com.santsg.bookingwebsite.application.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.santsg.bookingwebsite.entities.models.search.NationalitiesResponseBody;
+import com.santsg.bookingwebsite.entities.models.nationalty.NationalitiesResponseBody;
+import com.santsg.bookingwebsite.entities.models.nationalty.NationalityRequest;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
 import org.springframework.http.HttpHeaders;
@@ -20,12 +21,13 @@ public class NationalityService {
 
     public ApiResponse<NationalitiesResponseBody> getNationalities(String token) {
         String apiUrl = Globals.API_URL + "/lookupservice/getnationalities";
+        NationalityRequest nationalityRequest = new NationalityRequest();
         try {
             String response = restClient.post()
                     .uri(apiUrl)
                     .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                     .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
-                    .body("") // Boş body gönderiyoruz
+                    .body(nationalityRequest)
                     .retrieve()
                     .body(String.class);
 
