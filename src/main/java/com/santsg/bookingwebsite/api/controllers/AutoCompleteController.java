@@ -1,6 +1,6 @@
 package com.santsg.bookingwebsite.api.controllers;
 
-import com.santsg.bookingwebsite.application.services.SearchService;
+import com.santsg.bookingwebsite.application.services.AutoComplete;
 import com.santsg.bookingwebsite.entities.models.autocomplete.ArrivalAutocompleteResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import org.springframework.http.HttpHeaders;
@@ -11,11 +11,11 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/search")
-public class SearchController {
+public class AutoCompleteController {
 
-    private final SearchService searchService;
+    private final AutoComplete searchService;
 
-    public SearchController(SearchService searchService) {
+    public AutoCompleteController(AutoComplete searchService) {
         this.searchService = searchService;
     }
 

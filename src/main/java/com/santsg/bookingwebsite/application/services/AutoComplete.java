@@ -13,10 +13,10 @@ import org.springframework.web.client.RestClient;
 import org.springframework.web.client.RestClientException;
 
 @Service
-public class SearchService {
+public class AutoComplete {
     private final RestClient restClient;
 
-    public SearchService() {
+    public AutoComplete() {
         this.restClient = RestClient.create();
     }
 
