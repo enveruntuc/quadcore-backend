@@ -1,4 +1,4 @@
-package com.santsg.bookingwebsite.entities.models.pricesearch;
+package com.santsg.bookingwebsite.entities.models.pricesearch.hotelinformations;
 
 import lombok.Data;
 
