@@ -1,5 +1,9 @@
 package com.santsg.bookingwebsite.entities.models.currency;
 
+import lombok.Data;
+
+@Data
 public class CurrencyRequest {
-int a = 5;
+   private String currencyRequest;
+
 }
