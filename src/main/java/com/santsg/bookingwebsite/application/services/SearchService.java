@@ -3,8 +3,6 @@ package com.santsg.bookingwebsite.application.services;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.santsg.bookingwebsite.entities.models.search.ArrivalAutoCompleteRequest;
 import com.santsg.bookingwebsite.entities.models.search.ArrivalAutocompleteResponseBody;
-import com.santsg.bookingwebsite.entities.models.search.NationalitiesResponseBody;
-
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
 
@@ -49,27 +47,5 @@ public class SearchService {
             return null;
         }
 
-    }
-
-    public ApiResponse<NationalitiesResponseBody> getNationalities(String token) {
-        String apiUrl = "https://prod-services.tourvisio.com/v2/api/lookupservice/getnationalities";
-        try {
-            String response = restClient.post()
-                    .uri(apiUrl)
-                    .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                    .header(HttpHeaders.AUTHORIZATION, "Bearer " + token)
-                    .body("") // Boş body gönderiyoruz, gerekirse değiştirilebilir
-                    .retrieve()
-                    .body(String.class);
-
-            ObjectMapper objectMapper = new ObjectMapper();
-            ApiResponse<NationalitiesResponseBody> apiResponse = objectMapper.readValue(
-                    response,
-                    objectMapper.getTypeFactory().constructParametricType(ApiResponse.class,
-                            NationalitiesResponseBody.class));
-            return apiResponse;
-        } catch (RestClientException | com.fasterxml.jackson.core.JsonProcessingException e) {
-            return null;
-        }
     }
 }
