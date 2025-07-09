@@ -1,8 +1,9 @@
-package com.santsg.bookingwebsite.entities.models.search;
+package com.santsg.bookingwebsite.entities.models.autocomplete;
+
 import lombok.Data;
 
 @Data
-public class City {
+public class State {
     private String id;
     private String name;
 
@@ -21,4 +22,5 @@ public class City {
     public void setName(String name) {
         this.name = name;
     }
+
 }

@@ -1,5 +1,4 @@
-package com.santsg.bookingwebsite.entities.models.search;
-
+package com.santsg.bookingwebsite.entities.models.autocomplete;
 
 import lombok.Data;
 
@@ -32,5 +31,5 @@ public class Hotel {
     public void setName(String name) {
         this.name = name;
     }
-    
+
 }

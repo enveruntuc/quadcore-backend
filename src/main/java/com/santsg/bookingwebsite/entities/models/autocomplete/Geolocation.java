@@ -1,4 +1,5 @@
-package com.santsg.bookingwebsite.entities.models.search;
+package com.santsg.bookingwebsite.entities.models.autocomplete;
+
 import lombok.Data;
 
 @Data
@@ -22,4 +23,3 @@ public class Geolocation {
         this.latitude = latitude;
     }
 }
-

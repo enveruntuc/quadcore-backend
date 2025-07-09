@@ -1,7 +1,7 @@
 package com.santsg.bookingwebsite.api.controllers;
 
 import com.santsg.bookingwebsite.application.services.SearchService;
-import com.santsg.bookingwebsite.entities.models.search.ArrivalAutocompleteResponseBody;
+import com.santsg.bookingwebsite.entities.models.autocomplete.ArrivalAutocompleteResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;

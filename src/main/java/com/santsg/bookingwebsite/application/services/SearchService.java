@@ -1,8 +1,8 @@
 package com.santsg.bookingwebsite.application.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.santsg.bookingwebsite.entities.models.search.ArrivalAutoCompleteRequest;
-import com.santsg.bookingwebsite.entities.models.search.ArrivalAutocompleteResponseBody;
+import com.santsg.bookingwebsite.entities.models.autocomplete.ArrivalAutoCompleteRequest;
+import com.santsg.bookingwebsite.entities.models.autocomplete.ArrivalAutocompleteResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
 
