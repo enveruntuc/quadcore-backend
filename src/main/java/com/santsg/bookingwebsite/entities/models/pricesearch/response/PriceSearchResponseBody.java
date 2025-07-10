@@ -7,7 +7,7 @@ import lombok.Data;
 public class PriceSearchResponseBody {
     private String searchId;
     private String expiresOn;
-    private List<hotels> hotels;
+    private List<Hotels> hotels;
     private List<Object> tours;
     private Details details;
 }

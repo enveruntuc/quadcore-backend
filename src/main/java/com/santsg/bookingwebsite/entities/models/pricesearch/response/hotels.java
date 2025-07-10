@@ -4,7 +4,7 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class hotels {
+public class Hotels {
     private Geolocation geolocation;
     private double stars;
     private double rating;
