@@ -1,7 +1,9 @@
-package com.santsg.bookingwebsite.entities.models.pricesearch.hotelinformations;
+package com.santsg.bookingwebsite.entities.models.pricesearch.response;
 
 import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class Country {
 

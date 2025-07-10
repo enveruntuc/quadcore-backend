@@ -1,4 +1,4 @@
-package com.santsg.bookingwebsite.entities.models.pricesearch.hotelinformations;
+package com.santsg.bookingwebsite.entities.models.pricesearch.response;
 
 import lombok.Data;
 import java.util.List;
@@ -13,7 +13,7 @@ public class Rooms {
     private int stopSaleGuaranteed;
     private int stopSaleStandart;
     private List<Traveller> travellers;
-    private List<Object> thirdPartyInformation;
+    private ThirdPartyInformation thirdPartyInformation;
     private boolean visiblePL;
 
 }

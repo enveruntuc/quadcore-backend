@@ -1,5 +1,8 @@
 package com.santsg.bookingwebsite.entities.shared;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Message {
     private long id;
     private String code;

@@ -1,8 +1,10 @@
-package com.santsg.bookingwebsite.entities.models.pricesearch.hotelinformations;
+package com.santsg.bookingwebsite.entities.models.pricesearch.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class City {
 
     private String name;

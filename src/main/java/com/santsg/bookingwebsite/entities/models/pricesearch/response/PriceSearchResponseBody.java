@@ -1,13 +1,10 @@
-package com.santsg.bookingwebsite.entities.models.pricesearch;
+package com.santsg.bookingwebsite.entities.models.pricesearch.response;
 
 import java.util.List;
-
-import com.santsg.bookingwebsite.entities.models.pricesearch.hotelinformations.Details;
-
 import lombok.Data;
 
 @Data
-public class PriceSearchResponse {
+public class PriceSearchResponseBody {
     private String searchId;
     private String expiresOn;
     private List<hotels> hotels;

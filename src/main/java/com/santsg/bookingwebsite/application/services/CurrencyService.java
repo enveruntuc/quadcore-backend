@@ -28,9 +28,6 @@ public class CurrencyService {
         CurrencyRequest currencyRequest = new CurrencyRequest();
 
         try {
-            
-
-            
 
             String response = restClient.post()
                     .uri(apiUrl)
@@ -42,8 +39,8 @@ public class CurrencyService {
 
             ApiResponse<CurrencyResponseBody> apiResponse = objectMapper.readValue(
                     response,
-                    objectMapper.getTypeFactory().constructParametricType(ApiResponse.class, CurrencyResponseBody.class)
-            );
+                    objectMapper.getTypeFactory().constructParametricType(ApiResponse.class,
+                            CurrencyResponseBody.class));
 
             return apiResponse;
 
