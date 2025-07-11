@@ -1,9 +1,9 @@
-package com.santsg.bookingwebsite.entities.models.hotelproductinfo.request;
+package com.santsg.bookingwebsite.entities.models.getproductinfo.request;
 
 import lombok.Data;
 
 @Data
-public class HotelProductInfoRequest {
+public class GetProductInfoRequest {
 
     private Integer productType;
     private Integer ownerProvider;

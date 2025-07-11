@@ -1,9 +1,9 @@
-package com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.address;
+package com.santsg.bookingwebsite.entities.models.getproductinfo.response.address;
 
 import lombok.Data;
 import java.util.List;
 
-import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.Geolocation;
+import com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos.Geolocation;
 
 @Data
 public class Address {

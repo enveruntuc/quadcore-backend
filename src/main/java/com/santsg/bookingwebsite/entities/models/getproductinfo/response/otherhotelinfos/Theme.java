@@ -1,4 +1,4 @@
-package com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos;
+package com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos;
 
 import lombok.Data;
 

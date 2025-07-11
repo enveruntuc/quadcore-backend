@@ -1,4 +1,4 @@
-package com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.seosans;
+package com.santsg.bookingwebsite.entities.models.getproductinfo.response.seosans;
 
 import lombok.Data;
 import java.util.List;
