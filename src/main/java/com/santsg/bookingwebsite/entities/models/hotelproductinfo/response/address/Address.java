@@ -3,7 +3,7 @@ package com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.addr
 import lombok.Data;
 import java.util.List;
 
-import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.Geolocation;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.Geolocation;
 
 @Data
 public class Address {

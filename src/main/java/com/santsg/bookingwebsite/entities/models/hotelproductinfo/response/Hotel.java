@@ -4,6 +4,14 @@ import lombok.Data;
 import java.util.List;
 
 import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.address.Address;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.City;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.Country;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.Description;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.Geolocation;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.GiataInfo;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.HotelCategory;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.Location;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.otherhotelinfos.Theme;
 import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.seosans.Season;
 
 @Data
