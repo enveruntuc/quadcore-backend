@@ -1,4 +1,4 @@
-package com.santsg.bookingwebsite.entities.models.hotelproductinfo;
+package com.santsg.bookingwebsite.entities.models.hotelproductinfo.response;
 
 import lombok.Data;
 
@@ -6,4 +6,4 @@ import lombok.Data;
 public class GiataInfo {
     private String hotelId;
     private String destinationId;
-} 
+}

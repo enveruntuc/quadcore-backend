@@ -1,9 +1,10 @@
-package com.santsg.bookingwebsite.entities.models.hotelproductinfo;
-
-import com.santsg.bookingwebsite.entities.models.hotelproductinfo.seosans.Season;
+package com.santsg.bookingwebsite.entities.models.hotelproductinfo.response;
 
 import lombok.Data;
 import java.util.List;
+
+import com.santsg.bookingwebsite.entities.models.autocomplete.Country;
+import com.santsg.bookingwebsite.entities.models.hotelproductinfo.response.seosans.Season;
 
 @Data
 public class Hotel {

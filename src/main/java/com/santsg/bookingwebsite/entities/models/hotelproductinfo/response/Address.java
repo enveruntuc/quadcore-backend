@@ -1,7 +1,9 @@
-package com.santsg.bookingwebsite.entities.models.hotelproductinfo;
+package com.santsg.bookingwebsite.entities.models.hotelproductinfo.response;
 
 import lombok.Data;
 import java.util.List;
+
+import com.santsg.bookingwebsite.entities.models.autocomplete.Geolocation;
 
 @Data
 public class Address {

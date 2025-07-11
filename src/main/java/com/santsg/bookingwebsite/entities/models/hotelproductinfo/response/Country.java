@@ -1,14 +1,12 @@
-package com.santsg.bookingwebsite.entities.models.hotelproductinfo;
+package com.santsg.bookingwebsite.entities.models.hotelproductinfo.response;
 
 import lombok.Data;
 
 @Data
-public class Location {
+public class Country {
     private String name;
-    private String latitude;
-    private String longitude;
     private int provider;
     private boolean isTopRegion;
     private boolean ownLocation;
     private String id;
-} 
+}
