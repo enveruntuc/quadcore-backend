@@ -3,6 +3,6 @@ package com.santsg.bookingwebsite.entities.models.hotelproductinfo;
 import lombok.Data;
 
 @Data
-public class HotelProductInfoResponse {
-    private Hotel hotel;
-}
+public class Description {
+    private String text;
+} 

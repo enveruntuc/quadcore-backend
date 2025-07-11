@@ -1,4 +1,4 @@
-package com.santsg.bookingwebsite.entities.models.pricesearch.response;
+package com.santsg.bookingwebsite.entities.models.hotelproductinfo;
 
 import lombok.Data;
 
@@ -6,4 +6,4 @@ import lombok.Data;
 public class Geolocation {
     private String longitude;
     private String latitude;
-}
+} 
