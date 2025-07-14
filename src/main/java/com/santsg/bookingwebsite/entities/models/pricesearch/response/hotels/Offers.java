@@ -1,4 +1,4 @@
-package com.santsg.bookingwebsite.entities.models.pricesearch.response;
+package com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -25,6 +25,8 @@ public class Offers {
     private String offerId;
     private String checkIn;
     private Price price;
+    private boolean ownOffer;
+    private int provider;
 
     public boolean isAvailable() {
         return isAvailable;

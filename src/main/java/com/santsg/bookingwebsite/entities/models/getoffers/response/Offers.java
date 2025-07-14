@@ -5,8 +5,8 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.santsg.bookingwebsite.entities.models.getoffers.response.offers.Price;
 import com.santsg.bookingwebsite.entities.models.getoffers.response.offers.PriceBreakdownGroup;
-import com.santsg.bookingwebsite.entities.models.pricesearch.response.CancellationPolicies;
-import com.santsg.bookingwebsite.entities.models.pricesearch.response.Rooms;
+import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.CancellationPolicies;
+import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Rooms;
 
 import lombok.Data;
 

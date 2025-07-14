@@ -1,18 +1,19 @@
-package com.santsg.bookingwebsite.entities.models.pricesearch.response;
+package com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
 
 @Data
-public class Country {
+public class Town {
 
-    private String internationalCode;
-    private String name;
+    private String latitude;
+    private String longitude;
     private int provider;
+    private String id;
+    private String name;
     @JsonProperty("isTopRegion")
     private boolean isTopRegion;
-    @JsonProperty("ownLocation")
     private boolean ownLocation;
 
 }

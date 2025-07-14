@@ -6,7 +6,12 @@ import lombok.Data;
 
 @Data
 public class ThirdPartyInformation {
+    private List<Infos> infos;
 
-    private List<Object> infos;
+}
 
+@Data
+class Infos {
+    private String key;
+    private String value;
 }
