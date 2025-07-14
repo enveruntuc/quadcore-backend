@@ -7,4 +7,6 @@ public class Traveller {
     private int type;
     private int age;
     private String nationality;
+    private int minAge;
+    private int maxAge;
 }

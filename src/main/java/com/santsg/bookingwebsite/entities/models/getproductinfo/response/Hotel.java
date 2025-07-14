@@ -51,5 +51,6 @@ public class Hotel {
     private List<Room> rooms;
     private List<Board> boards;
     private List<PaymentPlanInfo> paymentPlanInfo;
+    private String originalName;
 
 }
