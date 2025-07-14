@@ -13,6 +13,7 @@ import lombok.Data;
 @Data
 public class Offers {
     private int night;
+    @JsonProperty("isAvailable")
     private boolean isAvailable;
     private int availability;
     private boolean availabilityChecked;
@@ -30,5 +31,5 @@ public class Offers {
     private String checkIn;
     private Price price;
     private List<PriceBreakdownGroup> priceBreakdowns;
-    
+
 }

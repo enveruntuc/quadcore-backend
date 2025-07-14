@@ -8,6 +8,6 @@ public class GetOffersResponseBody {
 
     private List<Offers> offers;
     private Information information;
-    private int productId;
+    private String productId;
 
 }
