@@ -1,5 +1,7 @@
 package com.santsg.bookingwebsite.entities.models.getoffers.request;
+import lombok.Data;
 
+@Data
 public class GetOffersRequest {
     private String searchId;
     private String offerId;
