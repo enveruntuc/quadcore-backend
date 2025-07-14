@@ -8,6 +8,8 @@ import lombok.Data;
 public class Facility {
     private String id;
     private String name;
+    private String note;
     @JsonProperty("isPriced")
     private boolean isPriced;
+    private boolean higlighted;
 }

@@ -12,4 +12,6 @@ public class Country {
     private boolean isTopRegion;
     private boolean ownLocation;
     private String id;
+    private String longitude;
+    private String latitude;
 }

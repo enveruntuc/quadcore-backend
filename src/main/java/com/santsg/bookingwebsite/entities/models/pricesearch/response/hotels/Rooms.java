@@ -3,8 +3,6 @@ package com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels;
 import lombok.Data;
 import java.util.List;
 
-import com.santsg.bookingwebsite.entities.models.pricesearch.response.ThirdPartyInformation;
-
 @Data
 public class Rooms {
     private int partNo;

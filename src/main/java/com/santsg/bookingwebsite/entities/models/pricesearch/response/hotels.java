@@ -15,6 +15,7 @@ import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Hot
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Location;
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Offers;
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Themes;
+import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.ThirdPartyInformation;
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Town;
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Village;
 
