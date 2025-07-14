@@ -9,7 +9,7 @@ public class Rooms {
     private String roomName;
     private String boardId;
     private String boardName;
-    private List<Object> boardGroups;
+    private List<BoardGroups> boardGroups;
     private int stopSaleGuaranteed;
     private int stopSaleStandart;
     private List<Traveller> travellers;
