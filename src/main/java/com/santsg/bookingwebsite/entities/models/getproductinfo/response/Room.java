@@ -15,4 +15,5 @@ public class Room {
     private List<MediaFile> mediaFiles;
     private String name;
     private String code;
+    private String id;
 }

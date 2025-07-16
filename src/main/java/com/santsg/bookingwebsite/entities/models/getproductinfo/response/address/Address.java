@@ -3,12 +3,13 @@ package com.santsg.bookingwebsite.entities.models.getproductinfo.response.addres
 import lombok.Data;
 import java.util.List;
 
+import com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos.City;
 import com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos.Geolocation;
 
 @Data
 public class Address {
 
-    private CityAddress city;
+    private City city;
     private List<String> addressLines;
     private String street;
     private String streetNumber;
