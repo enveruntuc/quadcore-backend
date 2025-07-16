@@ -13,7 +13,6 @@ import com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherho
 import com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos.HotelCategory;
 import com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos.Location;
 import com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos.PaymentPlanInfo;
-import com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos.Room;
 import com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos.Theme;
 import com.santsg.bookingwebsite.entities.models.getproductinfo.response.seosans.Season;
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Town;

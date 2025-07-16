@@ -12,4 +12,5 @@ public class PriceSearchResponseBody {
     private String expiresOn;
     private List<Hotels> hotels;
     private Details details;
+    private List<Object> tours;
 }

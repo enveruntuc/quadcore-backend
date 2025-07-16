@@ -5,8 +5,9 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.santsg.bookingwebsite.entities.models.getoffers.response.offers.Price;
 import com.santsg.bookingwebsite.entities.models.getoffers.response.offers.PriceBreakdownGroup;
-import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.CancellationPolicies;
+
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Rooms;
+import com.santsg.bookingwebsite.entities.models.getoffers.response.offers.CancellationPolicy;
 
 import lombok.Data;
 
@@ -20,7 +21,7 @@ public class Offers {
     private List<Rooms> rooms;
     @JsonProperty("isRefundable")
     private boolean isRefundable;
-    private List<CancellationPolicies> cancellationPolicies;
+    private List<CancellationPolicy> cancellationPolicies;
     private boolean thirdPartyOwnOffer;
     private List<Object> restrictions;
     private List<Object> warnings;
@@ -31,5 +32,7 @@ public class Offers {
     private String checkIn;
     private Price price;
     private List<PriceBreakdownGroup> priceBreakdowns;
+    private boolean ownOffer;
+    private int provider;
 
 }

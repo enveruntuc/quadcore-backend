@@ -1,4 +1,4 @@
-package com.santsg.bookingwebsite.entities.models.getproductinfo.response.otherhotelinfos;
+package com.santsg.bookingwebsite.entities.models.getproductinfo.response;
 
 import java.util.List;
 
