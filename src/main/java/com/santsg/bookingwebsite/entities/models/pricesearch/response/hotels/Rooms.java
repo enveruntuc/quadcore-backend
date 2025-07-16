@@ -22,5 +22,6 @@ public class Rooms {
     private ThirdPartyInformation thirdPartyInformation;
     private boolean visiblePL;
     private Spo spo;
+    private String roomInfoId;
 
 }

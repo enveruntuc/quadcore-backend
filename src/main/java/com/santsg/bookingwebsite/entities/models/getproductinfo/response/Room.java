@@ -10,6 +10,7 @@ import lombok.Data;
 
 @Data
 public class Room {
+    private List<Object> bedOptions;
     private List<Presentation> presentations;
     private List<Facility> facilities;
     private List<MediaFile> mediaFiles;
