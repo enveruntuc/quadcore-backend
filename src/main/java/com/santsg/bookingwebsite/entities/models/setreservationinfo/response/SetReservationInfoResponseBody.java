@@ -4,7 +4,7 @@ import com.santsg.bookingwebsite.entities.models.begintransaction.response.Reser
 import lombok.Data;
 
 @Data
-public class SetReservationInfoResponse {
+public class SetReservationInfoResponseBody {
     private String transactionId;
     private String expiresOn;
     private int status;
