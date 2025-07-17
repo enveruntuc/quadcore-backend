@@ -14,7 +14,5 @@ public class ReservationData {
     private List<Object> invoices;
     private PaymentDetail paymentDetail;
     private ReservationInfo reservationInfo;
-
     private List<Services> services;
-
 }
