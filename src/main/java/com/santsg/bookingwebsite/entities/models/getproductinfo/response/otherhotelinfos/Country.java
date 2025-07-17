@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Data
 public class Country {
+    private String internationalCode;
     private String name;
     private int provider;
     @JsonProperty("isTopRegion")
