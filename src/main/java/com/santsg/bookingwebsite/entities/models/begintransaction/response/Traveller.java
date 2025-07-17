@@ -33,4 +33,5 @@ public class Traveller {
     private Map<String, Object> additionalFields;
     private List<Object> insertFields;
     private int status;
+    private int gender;
 }
