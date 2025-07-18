@@ -2,6 +2,7 @@ package com.santsg.bookingwebsite.entities.models.getreservationlist.response;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.santsg.bookingwebsite.entities.models.begintransaction.response.BeginTransactionResponse.PaymentPlan;
 import com.santsg.bookingwebsite.entities.models.begintransaction.response.reservationinfo.DepartureCity;
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Price;
@@ -25,6 +26,7 @@ public class Reservation {
     private int reservationStatus;
     private int confirmationStatus;
     private int paymentStatus;
+    @JsonProperty("isPayAtHotel")
     private boolean isPayAtHotel;
     private Price salePrice;
     private DepartureCity departureCity;
@@ -54,6 +56,7 @@ public class Reservation {
     private int customerId;
     private String customerName;
     private String customerSurname;
+    private String agencyReservationNumber;
     private String supplierBookingNumber;
     private String cancellationDeadline;
     private List<Service> services;
@@ -73,6 +76,7 @@ public class Reservation {
     public static class Documents {
         private int documentType;
         private String url;
+        @JsonProperty("isDefault")
         private boolean isDefault;
         private boolean proforma;
         private int fromToType;

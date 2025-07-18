@@ -20,4 +20,5 @@ public class CustomerInfo {
     private boolean updateOnlyNullFields;
     @JsonProperty("isDefault")
     private boolean isDefault;
+    private String id;
 }

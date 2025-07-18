@@ -3,6 +3,7 @@ package com.santsg.bookingwebsite.entities.models.begintransaction.response.rese
 import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.hotels.Price;
 
 import lombok.Data;
@@ -61,5 +62,8 @@ public class ReservationInfo {
         private String changeDate;
         private String agencyReservationNumber;
         private String paidFrom;
+        private String encryptedBookingNumber;
+        @JsonProperty("isPayAtHotel")
+        private boolean isPayAtHotel;
 
 }
