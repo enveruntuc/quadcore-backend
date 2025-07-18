@@ -59,5 +59,7 @@ public class ReservationInfo {
         private boolean hasAvailablePromotionCode;
         private String note;
         private String changeDate;
+        private String agencyReservationNumber;
+        private String paidFrom;
 
 }

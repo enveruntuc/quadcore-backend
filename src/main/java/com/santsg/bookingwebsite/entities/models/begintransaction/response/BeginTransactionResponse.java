@@ -44,6 +44,8 @@ public class BeginTransactionResponse {
     public static class ContactPhone {
         private String code;
         private String number;
+        private String countryCode;
+        private String phoneNumber;
     }
 
     @Data

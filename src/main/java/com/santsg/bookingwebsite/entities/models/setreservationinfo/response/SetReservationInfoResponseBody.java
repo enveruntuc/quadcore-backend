@@ -1,4 +1,5 @@
 package com.santsg.bookingwebsite.entities.models.setreservationinfo.response;
+
 import com.santsg.bookingwebsite.entities.models.begintransaction.response.ReservationData;
 
 import lombok.Data;
@@ -10,5 +11,4 @@ public class SetReservationInfoResponseBody {
     private int status;
     private int transactionType;
     private ReservationData reservationData;
-
 }

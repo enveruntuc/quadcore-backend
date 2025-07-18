@@ -80,6 +80,7 @@ public class Services {
         private String accom;
         private String star;
         private Geolocation geoLocation;
+        private String thumbnail;
 
         @Data
         public static class HotelDetail {
@@ -100,6 +101,7 @@ public class Services {
             private String name;
             private List<Object> restrictions;
             private Geolocation geolocation;
+            private String thumbnail;
         }
 
     }
