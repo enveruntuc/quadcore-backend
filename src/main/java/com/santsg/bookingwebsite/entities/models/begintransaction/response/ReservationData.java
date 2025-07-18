@@ -13,6 +13,7 @@ import lombok.Data;
 public class ReservationData {
     private List<Traveller> travellers;
     private List<Object> invoices;
+    private List<Object> journal;
     private PaymentDetail paymentDetail;
     private ReservationInfo reservationInfo;
     private List<Services> services;

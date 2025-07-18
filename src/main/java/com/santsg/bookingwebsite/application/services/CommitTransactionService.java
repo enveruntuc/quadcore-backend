@@ -13,10 +13,10 @@ import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
 
 @Service
-public class CommitTransaction {
+public class CommitTransactionService {
     private final RestClient restClient;
 
-    public CommitTransaction() {
+    public CommitTransactionService() {
         this.restClient = RestClient.create();
     }
 

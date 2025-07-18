@@ -14,4 +14,5 @@ public class Address {
     private String street;
     private String streetNumber;
     private Geolocation geolocation;
+    private String zipCode;
 }

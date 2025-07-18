@@ -67,6 +67,7 @@ public class Services {
     @JsonProperty("isThirdPartyOwnProvider")
     private boolean isThirdPartyOwnProvider;
     private ThirdPartyInformation thirdPartyInformation;
+    private String providerBookingID;
 
     @Data
     public static class ServiceDetails {
