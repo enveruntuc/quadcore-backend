@@ -68,6 +68,7 @@ public class Services {
     private boolean isThirdPartyOwnProvider;
     private ThirdPartyInformation thirdPartyInformation;
     private String providerBookingID;
+    private String supplierBookingNumber;
 
     @Data
     public static class ServiceDetails {
