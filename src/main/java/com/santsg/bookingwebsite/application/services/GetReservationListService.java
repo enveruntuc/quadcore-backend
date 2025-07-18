@@ -17,8 +17,8 @@ public class GetReservationListService {
 
     private final RestClient restClient;
 
-    public GetReservationListService(RestClient restClient) {
-        this.restClient = restClient;
+    public GetReservationListService() {
+        this.restClient = RestClient.create();
     }
 
     public ApiResponse<GetReservationListResponseBody> getReservationList(String token,
