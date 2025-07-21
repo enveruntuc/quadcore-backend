@@ -69,6 +69,9 @@ public class Services {
     private ThirdPartyInformation thirdPartyInformation;
     private String providerBookingID;
     private String supplierBookingNumber;
+    private String mainServiceId;
+    private int agencyCommission;
+    private int serviceGroup;
 
     @Data
     public static class ServiceDetails {
@@ -83,6 +86,19 @@ public class Services {
         private String star;
         private Geolocation geoLocation;
         private String thumbnail;
+        private int priceType;
+        private ExtraServiceDetail extraServiceDetail;
+        private List<Object> restrictions;
+       
+
+        @Data   
+        public static class ExtraServiceDetail{
+          
+            private boolean show;
+            private boolean compulsory;
+            private boolean free;
+        }
+
 
         @Data
         public static class HotelDetail {
