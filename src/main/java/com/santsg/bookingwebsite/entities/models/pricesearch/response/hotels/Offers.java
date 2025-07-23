@@ -27,6 +27,9 @@ public class Offers {
     private Price price;
     private boolean ownOffer;
     private int provider;
+    private Supplier supplier;
+
+    
 
     public boolean isAvailable() {
         return isAvailable;
@@ -139,4 +142,10 @@ public class Offers {
     public void setPrice(Price price) {
         this.price = price;
     }
+    @Data
+    public static class Supplier{
+        private String name;
+    }
+
+    
 }
