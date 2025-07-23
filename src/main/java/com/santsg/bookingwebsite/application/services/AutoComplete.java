@@ -6,6 +6,8 @@ import com.santsg.bookingwebsite.entities.models.autocomplete.ArrivalAutocomplet
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -16,13 +18,15 @@ import org.springframework.web.client.RestClientException;
 public class AutoComplete {
     private final RestClient restClient;
 
+    private static final Logger logger = LoggerFactory.getLogger(AutoComplete.class);
+
     public AutoComplete() {
         this.restClient = RestClient.create();
     }
 
-    public ApiResponse<ArrivalAutocompleteResponseBody> getArrivalAutocomplete(String token, int productType,
-            String query, String culture) {
-        String apiUrl = Globals.API_URL + "/productservice/getarrivalautocomplete";
+    public ApiResponse<ArrivalAutocompleteResponseBody> getArrivalAutocomplete(String token, int productType, String query, String culture) {
+        String apiUrl = Globals.API_URL + "/productservice/autocomplete";
+        logger.info("AutoComplete.getArrivalAutocomplete called | userToken={} | productType={} | query={} | culture={}", token, productType, query, culture);
         ArrivalAutoCompleteRequest autoCompleteRequest = new ArrivalAutoCompleteRequest();
         autoCompleteRequest.setProductType(productType);
         autoCompleteRequest.setQuery(query);

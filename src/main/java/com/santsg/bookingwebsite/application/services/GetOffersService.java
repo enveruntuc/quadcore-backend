@@ -6,6 +6,8 @@ import com.santsg.bookingwebsite.entities.models.getoffers.response.GetOffersRes
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -14,6 +16,7 @@ import org.springframework.web.client.RestClientException;
 
 @Service
 public class GetOffersService {
+    private static final Logger logger = LoggerFactory.getLogger(GetOffersService.class);
     private final RestClient restClient;
 
     public GetOffersService() {
@@ -22,7 +25,7 @@ public class GetOffersService {
 
     public ApiResponse<GetOffersResponseBody> getOffers(String token, GetOffersRequest getOffersRequest) {
         String apiUrl = Globals.API_URL + "/productservice/getoffers";
-
+        logger.info("GetOffersService.getOffers called | userToken={} | request={}", token, getOffersRequest);
         try {
             String response = restClient.post()
                     .uri(apiUrl)

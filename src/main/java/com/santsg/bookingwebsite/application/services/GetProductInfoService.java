@@ -12,9 +12,12 @@ import com.santsg.bookingwebsite.entities.models.getproductinfo.request.GetProdu
 import com.santsg.bookingwebsite.entities.models.getproductinfo.response.GetProductInfoResponse;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class GetProductInfoService {
+    private static final Logger logger = LoggerFactory.getLogger(GetProductInfoService.class);
 
     private final RestClient restClient;
 

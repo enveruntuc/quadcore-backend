@@ -5,6 +5,8 @@ import com.santsg.bookingwebsite.entities.models.checkin.CheckInDayRequest;
 import com.santsg.bookingwebsite.entities.models.checkin.CheckInDayResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import org.springframework.web.client.RestClientException;
 
 @Service
 public class CheckInDayService {
+    private static final Logger logger = LoggerFactory.getLogger(CheckInDayService.class);
 
     private final RestClient restClient;
     
@@ -23,7 +26,7 @@ public class CheckInDayService {
 
     public ApiResponse<CheckInDayResponseBody> getCheckInDays(String token, CheckInDayRequest checkInDayRequest) {
         String apiUrl = Globals.API_URL + "/productservice/getcheckindates";
-
+        logger.info("CheckInDayService.getCheckInDays called | userToken={} | request={}", token, checkInDayRequest);
         try {
             String response = restClient.post()
                     .uri(apiUrl)

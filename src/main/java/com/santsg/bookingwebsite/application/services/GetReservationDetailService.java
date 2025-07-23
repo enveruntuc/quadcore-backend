@@ -11,9 +11,12 @@ import com.santsg.bookingwebsite.entities.models.getreservationdetail.request.Ge
 import com.santsg.bookingwebsite.entities.models.getreservationdetail.response.GetReservationDetailResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class GetReservationDetailService {
+    private static final Logger logger = LoggerFactory.getLogger(GetReservationDetailService.class);
 
     private final RestClient restClient;
 

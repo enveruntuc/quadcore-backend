@@ -12,11 +12,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.http.HttpHeaders;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/api/getoffers")
 public class GetOffersController {
 
+    private static final Logger logger = LoggerFactory.getLogger(GetOffersController.class);
     private final GetOffersService getOffersService;
 
     public GetOffersController(GetOffersService getOffersService) {
@@ -31,6 +34,7 @@ public class GetOffersController {
         if (token != null && token.startsWith("Bearer ")) {
             token = token.substring(7);
         }
+        logger.info("Get offers endpoint called | userToken={} | request={}", token, getOffersRequest);
         return getOffersService.getOffers(token, getOffersRequest);
     }
 

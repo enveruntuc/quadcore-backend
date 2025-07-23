@@ -8,12 +8,15 @@ import com.santsg.bookingwebsite.entities.models.setreservationinfo.request.SetR
 import com.santsg.bookingwebsite.entities.models.setreservationinfo.response.SetReservationInfoResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import org.springframework.http.HttpHeaders;
-import org.springframework.web.bind.annotation.*;;
+import org.springframework.web.bind.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/api/setreservationinfo")
 public class SetReservationInfoController {
 
+    private static final Logger logger = LoggerFactory.getLogger(SetReservationInfoController.class);
     private final SetReservationInfoService setReservationInfoService;
 
     public SetReservationInfoController(SetReservationInfoService setReservationInfoService) {
@@ -28,6 +31,7 @@ public class SetReservationInfoController {
         if (token != null && token.startsWith("Bearer ")) {
             token = token.substring(7);
         }
+        logger.info("Set reservation info endpoint called | userToken={} | request={}", token, setReservationInfoRequest);
         return setReservationInfoService.setReservationInfo(token, setReservationInfoRequest);
     }
 

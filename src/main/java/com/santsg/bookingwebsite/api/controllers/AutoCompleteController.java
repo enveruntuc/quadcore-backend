@@ -6,6 +6,8 @@ import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
@@ -13,6 +15,7 @@ import java.util.Map;
 @RequestMapping("/search")
 public class AutoCompleteController {
 
+    private static final Logger logger = LoggerFactory.getLogger(AutoCompleteController.class);
     private final AutoComplete searchService;
 
     public AutoCompleteController(AutoComplete searchService) {
@@ -27,6 +30,7 @@ public class AutoCompleteController {
         int productType = (int) body.getOrDefault("productType", 0);
         String query = (String) body.getOrDefault("query", "");
         String culture = (String) body.getOrDefault("culture", "");
+        logger.info("Autocomplete endpoint called | userToken={} | productType={} | query={} | culture={}", token, productType, query, culture);
         ApiResponse<ArrivalAutocompleteResponseBody> response = searchService.getArrivalAutocomplete(token, productType,
                 query, culture);
         if (response == null) {

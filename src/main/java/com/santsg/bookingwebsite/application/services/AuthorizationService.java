@@ -11,11 +11,13 @@ import com.santsg.bookingwebsite.entities.models.login.LoginRequest;
 import com.santsg.bookingwebsite.entities.models.login.LoginResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals; 
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 @Service
 public class AuthorizationService {
+    private static final Logger logger = LoggerFactory.getLogger(AuthorizationService.class);
     private final RestClient restClient;
 
     public AuthorizationService() {
@@ -25,7 +27,7 @@ public class AuthorizationService {
     public String login(String username, String password, String agency) {
         String apiUrl = Globals.API_URL + "/authenticationservice/login";
         LoginRequest loginRequest = new LoginRequest(agency, username, password);
-
+        logger.info("AuthorizationService.login called | username={} | agency={}", username, agency);
         try {
             String response = restClient.post()
                     .uri(apiUrl)

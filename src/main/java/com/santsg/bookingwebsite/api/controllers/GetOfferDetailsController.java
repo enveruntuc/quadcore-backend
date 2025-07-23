@@ -11,11 +11,14 @@ import com.santsg.bookingwebsite.entities.models.getofferdetails.request.GetOffe
 import com.santsg.bookingwebsite.entities.models.getofferdetails.response.OfferDetailsResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import org.springframework.http.HttpHeaders;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/api/getofferdetails")
 public class GetOfferDetailsController {
 
+    private static final Logger logger = LoggerFactory.getLogger(GetOfferDetailsController.class);
     private final GetOfferDetailsService getOfferDetailsService;
     public GetOfferDetailsController(GetOfferDetailsService getOfferDetailsService) {
         this.getOfferDetailsService = getOfferDetailsService;
@@ -29,6 +32,7 @@ public class GetOfferDetailsController {
         if (token != null && token.startsWith("Bearer ")) {
             token = token.substring(7);
         }
+        logger.info("Get offer details endpoint called | userToken={} | request={}", token, request);
         return getOfferDetailsService.getOfferDetails(token, request);
     }
     

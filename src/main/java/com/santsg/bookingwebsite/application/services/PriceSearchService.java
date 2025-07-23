@@ -5,6 +5,8 @@ import com.santsg.bookingwebsite.entities.models.pricesearch.request.PriceSearch
 import com.santsg.bookingwebsite.entities.models.pricesearch.response.PriceSearchResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import org.springframework.web.client.RestClientException;
 
 @Service
 public class PriceSearchService {
+    private static final Logger logger = LoggerFactory.getLogger(PriceSearchService.class);
 
     private final RestClient restClient;
 
@@ -22,6 +25,7 @@ public class PriceSearchService {
 
     public ApiResponse<PriceSearchResponseBody> getPriceSearch(String token, PriceSearchRequest priceSearchRequest) {
         String apiUrl = Globals.API_URL + "/productservice/pricesearch";
+        logger.info("PriceSearchService.getPriceSearch called | userToken={} | request={}", token, priceSearchRequest);
         try {
             String response = restClient.post()
                     .uri(apiUrl)

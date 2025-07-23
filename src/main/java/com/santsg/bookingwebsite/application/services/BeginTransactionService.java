@@ -12,9 +12,12 @@ import com.santsg.bookingwebsite.entities.models.begintransaction.request.BeginT
 import com.santsg.bookingwebsite.entities.models.begintransaction.response.BeginTransactionResponse;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class BeginTransactionService {
+    private static final Logger logger = LoggerFactory.getLogger(BeginTransactionService.class);
 
     private final RestClient restClient;
 

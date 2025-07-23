@@ -11,11 +11,14 @@ import com.santsg.bookingwebsite.application.services.GetReservationDetailServic
 import com.santsg.bookingwebsite.entities.models.getreservationdetail.request.GetReservationDetailRequest;
 import com.santsg.bookingwebsite.entities.models.getreservationdetail.response.GetReservationDetailResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/api/getreservationdetail")
 public class GetReservationDetailController {
 
+    private static final Logger logger = LoggerFactory.getLogger(GetReservationDetailController.class);
     private final GetReservationDetailService getReservationDetailService;
 
     public GetReservationDetailController(GetReservationDetailService getReservationDetailService) {
@@ -30,7 +33,7 @@ public class GetReservationDetailController {
         if (token != null && token.startsWith("Bearer ")) {
             token = token.substring(7);
         }
-
+        logger.info("Get reservation detail endpoint called | userToken={} | request={}", token, getReservationDetailRequest);
         return getReservationDetailService.getReservationDetail(token, getReservationDetailRequest);
     }
 

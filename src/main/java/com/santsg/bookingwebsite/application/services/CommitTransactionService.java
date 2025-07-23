@@ -11,9 +11,12 @@ import com.santsg.bookingwebsite.entities.models.committransaction.request.Commi
 import com.santsg.bookingwebsite.entities.models.committransaction.response.CommitTransactionResponseBody;
 import com.santsg.bookingwebsite.entities.shared.ApiResponse;
 import com.santsg.bookingwebsite.entities.shared.Globals;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class CommitTransactionService {
+    private static final Logger logger = LoggerFactory.getLogger(CommitTransactionService.class);
     private final RestClient restClient;
 
     public CommitTransactionService() {
