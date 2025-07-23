@@ -24,9 +24,12 @@ public class AutoComplete {
         this.restClient = RestClient.create();
     }
 
-    public ApiResponse<ArrivalAutocompleteResponseBody> getArrivalAutocomplete(String token, int productType, String query, String culture) {
-        String apiUrl = Globals.API_URL + "/productservice/autocomplete";
-        logger.info("AutoComplete.getArrivalAutocomplete called | userToken={} | productType={} | query={} | culture={}", token, productType, query, culture);
+    public ApiResponse<ArrivalAutocompleteResponseBody> getArrivalAutocomplete(String token, int productType,
+            String query, String culture) {
+        String apiUrl = Globals.API_URL + "/productservice/getarrivalautocomplete";
+        logger.info(
+                "AutoComplete.getArrivalAutocomplete called | userToken={} | productType={} | query={} | culture={}",
+                token, productType, query, culture);
         ArrivalAutoCompleteRequest autoCompleteRequest = new ArrivalAutoCompleteRequest();
         autoCompleteRequest.setProductType(productType);
         autoCompleteRequest.setQuery(query);
