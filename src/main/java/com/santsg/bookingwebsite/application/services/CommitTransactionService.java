@@ -25,6 +25,7 @@ public class CommitTransactionService {
 
     public ApiResponse<CommitTransactionResponseBody> commitTransaction(String token,
             CommitTransactionRequest commitTransactionRequest) {
+        logger.info("CommitTransactionService.commitTransaction called | userToken={} | request={}", token, commitTransactionRequest);
         String apiUrl = Globals.API_URL + "/bookingservice/committransaction";
 
         try {

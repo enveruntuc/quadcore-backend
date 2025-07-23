@@ -27,6 +27,7 @@ public class GetReservationListService {
     public ApiResponse<GetReservationListResponseBody> getReservationList(String token,
             GetReservationListRequest getReservationListRequest) {
         String apiUrl = Globals.API_URL + "/bookingservice/getreservationlist";
+        logger.info("GetReservationListService.getReservationList called | userToken={} | request={}", token, getReservationListRequest);
 
         try {
             String response = restClient.post()

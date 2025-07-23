@@ -26,6 +26,7 @@ public class CurrencyService {
     }
 
     public ApiResponse<CurrencyResponseBody> getCurrencies(String token) {
+        logger.info("CurrencyService.getCurrencies called | userToken={}", token);
         String apiUrl = Globals.API_URL + "/lookupservice/getcurrencies";
 
         CurrencyRequest currencyRequest = new CurrencyRequest();

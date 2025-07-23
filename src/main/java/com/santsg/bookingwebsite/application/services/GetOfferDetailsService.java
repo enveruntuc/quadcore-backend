@@ -25,6 +25,7 @@ public class GetOfferDetailsService {
     }
 
     public ApiResponse<OfferDetailsResponseBody> getOfferDetails(String token, GetOffersDetailsRequest request) {
+        logger.info("GetOfferDetailsService.getOfferDetails called | userToken={} | request={}", token, request);
         String apiUrl = Globals.API_URL + "/productservice/getofferdetails";
         try {
             String response = restClient.post()

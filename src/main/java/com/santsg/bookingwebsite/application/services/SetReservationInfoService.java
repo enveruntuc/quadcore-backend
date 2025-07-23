@@ -27,6 +27,8 @@ public class SetReservationInfoService {
     public ApiResponse<SetReservationInfoResponseBody> setReservationInfo(String token,
             SetReservationInfoRequest setReservationInfoRequest) {
         String apiUrl = Globals.API_URL + "/bookingservice/setreservationinfo";
+        logger.info("SetReservationInfoService.setReservationInfo called | userToken={} | request={}", token,
+                setReservationInfoRequest);
         try {
             String response = restClient.post()
                     .uri(apiUrl)

@@ -27,6 +27,7 @@ public class GetReservationDetailService {
     public ApiResponse<GetReservationDetailResponseBody> getReservationDetail(String token,
             GetReservationDetailRequest getReservationDetailRequest) {
         String apiUrl = Globals.API_URL + "/bookingservice/getreservationdetail";
+        logger.info("GetReservationDetailService.getReservationDetail called | userToken={} | request={}", token, getReservationDetailRequest);
 
         try {
             String response = restClient.post()

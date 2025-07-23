@@ -24,6 +24,7 @@ public class NationalityService {
 
     public ApiResponse<NationalitiesResponseBody> getNationalities(String token) {
         String apiUrl = Globals.API_URL + "/lookupservice/getnationalities";
+        logger.info("NationalityService.getNationalities called | userToken={}", token);
         NationalityRequest nationalityRequest = new NationalityRequest();
         try {
             String response = restClient.post()

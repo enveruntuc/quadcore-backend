@@ -25,8 +25,8 @@ public class BeginTransactionService {
         this.restClient = RestClient.create();
     }
 
-    public ApiResponse<BeginTransactionResponse> beginTransaction(String token,
-            BeginTransactionRequest beginTransactionRequest) {
+    public ApiResponse<BeginTransactionResponse> beginTransaction(String token, BeginTransactionRequest beginTransactionRequest) {
+        logger.info("BeginTransactionService.beginTransaction called | userToken={} | request={}", token, beginTransactionRequest);
         String apiUrl = Globals.API_URL + "/bookingservice/begintransaction";
         try {
 

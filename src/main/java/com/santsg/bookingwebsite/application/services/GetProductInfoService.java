@@ -28,6 +28,7 @@ public class GetProductInfoService {
     public ApiResponse<GetProductInfoResponse> getProductInfo(String token,
             GetProductInfoRequest getProductInfoRequest) {
         String apiUrl = Globals.API_URL + "/productservice/getproductinfo";
+        logger.info("GetProductInfoService.getProductInfo called | userToken={} | request={}", token, getProductInfoRequest);
 
         try {
             String response = restClient.post()
